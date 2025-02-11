@@ -1,0 +1,14 @@
+[
+    {
+      "nombre": "Familia López",
+      "codigo": "LOPEZ2025",
+      "personas_invitadas": 4,
+      "mesa": 1
+    },
+    {
+      "nombre": "Familia Martínez",
+      "codigo": "MARTINEZ2025",
+      "personas_invitadas": 2,
+      "mesa": 2
+    }
+  ]

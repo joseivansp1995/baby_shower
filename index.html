@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Shower José Antonio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Página Principal -->
+  <div id="home">
+    <h1 class="main-title">Baby Shower José Antonio</h1>
+    <div class="message-container">
+      <p class="centered-message">✨ Un bebé en camino y un corazón lleno de amor ✨</p>
+      <p class="centered-message">Cada persona que nos acompaña en esta etapa es un regalo, y tú eres uno muy especial para nosotros.</p>
+      <button id="open-invitation">Abrir Invitación</button>
+    </div>
+
+    <!-- Modal para ingresar el código -->
+    <div id="code-modal" class="modal hidden">
+      <button id="close-modal" class="close-button">×</button> <!-- Botón de cierre -->
+      <h2>Ingresa tu código de invitación</h2>
+      <input type="text" id="code-input" placeholder="Código">
+      <button id="submit-code">Enviar</button> <!-- Botón con texto "Enviar" -->
+    </div>
+
+    <!-- Contenedor para las abejas voladoras -->
+    <div id="bees-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Shower José Antonio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Página de Invitación -->
+  <div id="invitation">
+    <header>
+      <h1>Baby Shower José Antonio</h1>
+      <p id="welcome-message"></p>
+    </header>
+
+    <!-- Detalles del Evento (Carta Vintage) -->
+    <section id="event-details" class="vintage-card">
+      <h2>Detalles del Evento</h2>
+      <div class="card-content">
+        <p><i class="fa-solid fa-calendar-days"></i> Fecha: Sábado 8 de Marzo de 2025</p>
+        <p><i class="fa-solid fa-clock"></i> Hora: 13:00 horas</p>
+        <p><i class="fa-solid fa-location-dot"></i> Lugar: Quinta Angeles</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4514.565352358854!2d-92.9144977870005!3d17.919004697952126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edda3ca66b27d7%3A0x19b207114d1f26ae!2sQuinta%20Angeles!5e0!3m2!1ses!2smx!4v1739242613220!5m2!1ses!2smx"
+          width="100%"
+          height="200"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a href="https://maps.app.goo.gl/RkCZbE4G595cNp5H8" target="_blank" class="map-button">Ir al Mapa</a>
+      </div>
+    </section>
+
+    <!-- Contador Regresivo -->
+    <section id="countdown-section" class="countdown-box">
+      <h2>Faltan...</h2>
+      <div id="countdown"></div>
+    </section>
+
+    <!-- Mesas de Regalos -->
+    <section class="mesa-regalos">
+      <h2>Mesas de Regalos</h2>
+      <button onclick="window.open('https://www.amazon.com')">Amazon</button>
+      <button onclick="window.open('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51557736')">Liverpool</button>
+    </section>
+
+    <section class="confirm-attendance">
+      <h2>Confirmar Asistencia</h2>
+      <a id="confirm-link" href="#" target="_blank">
+        <button>Confirmar por WhatsApp</button>
+      </a>
+    </section>
+
+  <!-- Reproductor de Audio -->
+  <div id="audio-controls">
+    <audio id="background-music" src="assets/music.mp3" loop></audio>
+  </div>
+  
+
+  <script src="invitation.js"></script>
+</body>
+</html>

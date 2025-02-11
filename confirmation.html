@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmar Asistencia - Baby Shower José Antonio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Página de Confirmación -->
+  <div id="confirmation-page">
+    <header>
+      <h1>Confirmar Asistencia</h1>
+      <p>Por favor, completa el siguiente formulario para confirmar tu asistencia.</p>
+    </header>
+
+    <!-- Formulario de Confirmación -->
+    <form id="confirmation-form">
+      <label for="guest-name">Nombre registrado:</label>
+      <input type="text" id="guest-name" placeholder="Cargando..." readonly>
+
+      <label for="attendance">¿Podrás asistir?</label>
+      <div class="button-group">
+        <button type="button" id="confirm-yes" class="btn btn-primary">Sí</button>
+        <button type="button" id="confirm-no" class="btn btn-secondary">No</button>
+      </div>
+
+      <!-- Contenedor para los lugares asignados -->
+      <div id="places-container" style="display: none;">
+        <p>Se le han asignado <span id="max-places"></span> lugares. A continuación, confirme el número de lugares a ocupar:</p>
+        <div id="places-checkboxes" class="checkbox-group"></div>
+      </div>
+
+      <button type="submit" id="submit-confirmation" style="display: none;" class="btn btn-primary">Enviar Respuesta</button>
+    </form>
+
+    <!-- Reproductor de Audio -->
+    <div id="audio-controls">
+      <audio id="background-music" src="assets/music.mp3" loop></audio>
+    </div>
+  </div>
+
+  <script src="confirmation.js"></script>
+</body>
+</html>
