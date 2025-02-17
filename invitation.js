@@ -4,7 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const guestName = urlParams.get('name');
 
   if (guestName) {
-    document.getElementById('welcome-message').textContent = `¡Bienvenidos, ${guestName}!`;
+    document.getElementById('welcome-message').textContent = `¡Hola, ${guestName}! 
+      Estamos emocionados de compartir este día tan especial contigo. 
+      Tu presencia hará que el Baby Shower de José Antonio sea aún más mágico.`;
 
     // Generar el enlace para confirmar asistencia
     const confirmLink = document.getElementById('confirm-link');
