@@ -459,3 +459,134 @@ button:hover {
     width: 100%;
   }
 }
+/* Contenedor del carrusel */
+.carousel-container {
+  position: relative;
+  max-width: 80%; /* Ancho máximo del carrusel */
+  margin: 0 auto;
+  overflow: hidden;
+  perspective: 1000px; /* Profundidad 3D */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d; /* Preservar el efecto 3D */
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Cada foto ocupa el ancho completo */
+  position: relative;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.carousel-photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones "Anterior" y "Siguiente" */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%; /* Forma circular */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Cambio de color al pasar el mouse */
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Botón de cierre */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* Botón de pantalla completa */
+.fullscreen-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.fullscreen-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Cambio de color al pasar el mouse */
+}
+
+.fullscreen-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Botón para salir del modo pantalla completa */
+.fullscreen-close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2000;
+  display: none;
+}
+
+.fullscreen-close.hidden {
+  display: none;
+}
+
+.exit-fullscreen-button {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.exit-fullscreen-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Cambio de color al pasar el mouse */
+}
