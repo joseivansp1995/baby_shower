@@ -48,17 +48,56 @@
       <a id="confirm-link" href="#" target="_blank">
         <button>Confirmar por WhatsApp</button>
       </a>
+      <!-- Mensaje destacado sobre la fecha límite -->
+      <p class="important-message">
+        ⚠️ <strong>Importante:</strong> La fecha límite para confirmar tu asistencia es el <strong>25 de febrero de 2025</strong>. Si no confirmas antes de esta fecha, tu asistencia será cancelada automáticamente.
+      </p>
     </section>
-    <!-- Mensaje destacado sobre la fecha límite -->
-    <p class="important-message">
-      ⚠️ <strong>Importante:</strong> La fecha límite para confirmar tu asistencia es el <strong>25 de febrero de 2025</strong>. Si no confirmas antes de esta fecha, tu asistencia será cancelada automáticamente.
-    </p>
   </div>
   <!-- Reproductor de Audio -->
   <div id="audio-controls">
     <audio id="background-music" src="assets/music.mp3" loop></audio>
   </div>
-  
+
+  <!-- Contenedor de los globos -->
+  <div id="balloon-container"></div>
+
   <script src="invitation.js"></script>
+  <script>
+    // Función para crear el efecto de globos flotantes con movimiento en zigzag
+    function createFloatingBalloons() {
+      const balloonContainer = document.getElementById('balloon-container');
+  
+      function launchBalloon() {
+        const balloon = document.createElement('img');
+        balloon.src = 'assets/winnie-piglet.png'; // Ruta de la imagen
+        balloon.classList.add('balloon'); // Clase para estilizar el globo
+  
+        // Posición inicial aleatoria en el eje X
+        const randomX = Math.random() * window.innerWidth;
+        balloon.style.left = `${randomX}px`;
+  
+        // Añadir el globo al contenedor
+        balloonContainer.appendChild(balloon);
+  
+        // Animación de flotación con zigzag
+        setTimeout(() => {
+          balloon.style.transform = 'translateY(-150vh)'; // Subir el globo hacia arriba
+          balloon.style.animation = 'float-zigzag 8s ease-in-out forwards'; // Movimiento en zigzag
+        }, 100);
+  
+        // Eliminar el globo después de la animación
+        setTimeout(() => {
+          balloon.remove();
+        }, 8000); // Duración de la animación (8 segundos)
+      }
+  
+      // Lanzar un nuevo globo cada 4 segundos
+      setInterval(launchBalloon, 4000);
+    }
+  
+    // Iniciar el efecto de globos flotantes
+    createFloatingBalloons();
+  </script>
 </body>
 </html>
