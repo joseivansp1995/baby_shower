@@ -72,12 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
     confirmNoButton.addEventListener('click', () => {
       if (selectedGuest) {
-        const message = `La ${selectedGuest.nombre} ha cancelado su asistencia al Baby Shower de José Antonio.`;
+        const message = `${selectedGuest.nombre} ha cancelado su asistencia al Baby Shower de José Antonio.`;
         alert(message);
   
         // Enviar mensaje al organizador
         const messageToOrganizer = encodeURIComponent(message);
-        window.open(`https://wa.me/9321111304?text=${messageToOrganizer}`, '_blank');
+        window.open(`https://wa.me/9932412542?text=${messageToOrganizer}`, '_blank');
   
         window.close(); // Cierra la pestaña
       }
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   
       const totalPlaces = selectedPlaces.reduce((sum, place) => sum + place, 0);
-      const message = `La ${selectedGuest.nombre} ha confirmado su asistencia al Baby Shower de José Antonio. Ocupará ${totalPlaces} lugares.`;
+      const message = `${selectedGuest.nombre} ha confirmado su asistencia al Baby Shower de José Antonio. Ocupará ${totalPlaces} lugares.`;
       alert(message);
   
       // Enviar mensaje al organizador
