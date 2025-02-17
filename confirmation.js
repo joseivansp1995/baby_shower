@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
       // Enviar mensaje al organizador
       const messageToOrganizer = encodeURIComponent(message);
-      window.open(`https://wa.me/9321111304?text=${messageToOrganizer}`, '_blank');
+      window.open(`https://wa.me/9932412542?text=${messageToOrganizer}`, '_blank');
   
       window.close(); // Cierra la pestaña
     });
