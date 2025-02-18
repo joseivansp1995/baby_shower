@@ -628,3 +628,23 @@ button:hover {
   height: auto;
   bottom: 0; /* Comienza desde la parte inferior */
 }
+/* Estilo del botón "Ir al Mapa" */
+.vintage-card a.map-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ADE7F5; /* Mismo color azul claro */
+  color: black; /* Texto negro */
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Pacifico', cursive; /* Misma fuente que "Ver Galería" */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.vintage-card a.map-button:hover {
+  background-color: #C2CDBF; /* Verde suave al pasar el mouse */
+  transform: scale(1.1); /* Efecto de agrandamiento */
+}
