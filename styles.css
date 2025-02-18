@@ -155,10 +155,11 @@ button:hover {
   color: white; /* Color del texto */
   font-size: 1rem;
   font-family: 'Pacifico', cursive;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada para mejorar la legibilidad */
   margin: 20px auto; /* Centrar el botón */
   display: block; /* Asegurarse de que esté centrado */
 }
+
 .modal button#submit-code:hover {
   transform: scale(1.1); /* Efecto de agrandamiento */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
