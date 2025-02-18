@@ -81,40 +81,45 @@
 
   <script src="invitation.js"></script>
   <script>
-    // Función para crear el efecto de globos flotantes con movimiento en zigzag
-    function createFloatingBalloons() {
-      const balloonContainer = document.getElementById('balloon-container');
-  
-      function launchBalloon() {
-        const balloon = document.createElement('img');
-        balloon.src = 'assets/winnie-piglet.png'; // Ruta de la imagen
-        balloon.classList.add('balloon'); // Clase para estilizar el globo
-  
-        // Posición inicial aleatoria en el eje X
-        const randomX = Math.random() * window.innerWidth;
-        balloon.style.left = `${randomX}px`;
-  
-        // Añadir el globo al contenedor
-        balloonContainer.appendChild(balloon);
-  
-        // Animación de flotación con zigzag
-        setTimeout(() => {
-          balloon.style.transform = 'translateY(-150vh)'; // Subir el globo hacia arriba
-          balloon.style.animation = 'float-zigzag 8s ease-in-out forwards'; // Movimiento en zigzag
-        }, 100);
-  
-        // Eliminar el globo después de la animación
-        setTimeout(() => {
-          balloon.remove();
-        }, 8000); // Duración de la animación (8 segundos)
-      }
-  
-      // Lanzar un nuevo globo cada 4 segundos
-      setInterval(launchBalloon, 4000);
-    }
-  
-    // Iniciar el efecto de globos flotantes
-    createFloatingBalloons();
+    // Función para crear el efecto de globos flotantes
+function createFloatingBalloons() {
+  const balloonContainer = document.getElementById('balloon-container');
+  let isBalloonActive = false; // Variable para controlar si hay un globo activo
+
+  function launchBalloon() {
+    if (isBalloonActive) return; // Si ya hay un globo activo, no lanzar otro
+
+    isBalloonActive = true; // Marcar que hay un globo activo
+
+    const balloon = document.createElement('img');
+    balloon.src = 'assets/winnie-piglet.png'; // Ruta de la imagen
+    balloon.classList.add('balloon'); // Clase para estilizar el globo
+
+    // Posición inicial aleatoria en el eje X
+    const randomX = Math.random() * window.innerWidth;
+    balloon.style.left = `${randomX}px`;
+
+    // Añadir el globo al contenedor
+    balloonContainer.appendChild(balloon);
+
+    // Animación de flotación con zigzag
+    setTimeout(() => {
+      balloon.style.animation = 'float-zigzag 8s ease-in-out forwards'; // Movimiento en zigzag
+    }, 100);
+
+    // Eliminar el globo después de la animación
+    setTimeout(() => {
+      balloon.remove();
+      isBalloonActive = false; // Marcar que ya no hay globo activo
+    }, 8000); // Duración de la animación (8 segundos)
+  }
+
+  // Lanzar un nuevo globo cada 4 segundos
+  setInterval(launchBalloon, 4000);
+}
+
+// Iniciar el efecto de globos flotantes
+createFloatingBalloons();
   </script>
 </body>
 </html>
