@@ -8,11 +8,10 @@
 /* Estilo global */
 body {
   margin: 0;
-  font-family: 'Londonderry Air';
+  font-family: 'Londonderry Air', cursive;
   color: #333;
   background-color: #FFE7B0; /* Fondo amarillo crema */
 }
-
 
 /* Estilo de la página principal */
 #home {
@@ -42,7 +41,7 @@ body {
   color: #70cbe2; /* Azul claro */
   margin-bottom: 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  -webkit-text-stroke: 1px rgb(3, 3, 3); /* Borde  alrededor del texto */
+  -webkit-text-stroke: 1px rgb(3, 3, 3); /* Borde alrededor del texto */
 }
 
 /* Contenedor del mensaje con fondo semitransparente */
@@ -72,9 +71,9 @@ button {
   border-radius: 25px;
   cursor: pointer;
   font-size: 2rem;
-  font-family: 'Pacifico';
+  font-family: 'Pacifico', cursive;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  -webkit-text-stroke: 0.5px rgb(3, 3, 3); /* Borde  alrededor del texto */
+  -webkit-text-stroke: 0.5px rgb(3, 3, 3); /* Borde alrededor del texto */
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 20px; /* Espacio entre el mensaje y el botón */
 }
@@ -163,6 +162,7 @@ button:hover {
   transform: scale(1.1); /* Efecto de agrandamiento */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
 }
+
 /* Contenedor de las abejas */
 #bees-container {
   position: fixed;
@@ -342,6 +342,7 @@ button:hover {
   background-color: #E5D4B5; /* Beige claro al pasar el mouse */
   transform: scale(1.1); /* Efecto de agrandamiento */
 }
+
 /* Estilo de la página de confirmación */
 #confirmation-page {
   padding: 20px;
@@ -380,71 +381,6 @@ button:hover {
   border-radius: 5px;
 }
 
-/* Estilo de los botones */
-.btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family: 'Pacifico', cursive;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin: 5px;
-}
-
-.btn-primary {
-  background-color: #ADE7F5; /* Azul claro */
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #C2CDBF; /* Verde suave */
-  transform: scale(1.1);
-}
-
-.btn-secondary {
-  background-color: #FFE7B0; /* Amarillo crema */
-  color: #333;
-}
-
-.btn-secondary:hover {
-  background-color: #E5D4B5; /* Beige claro */
-  transform: scale(1.1);
-}
-
-/* Grupo de botones */
-.button-group {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Estilo de los checkboxes */
-.checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.checkbox-group input[type="checkbox"] {
-  display: none; /* Ocultar el checkbox por defecto */
-}
-
-.checkbox-group label {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ADE7F5; /* Azul claro */
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.checkbox-group input[type="checkbox"]:checked + label {
-  background-color: #C2CDBF; /* Verde suave */
-  transform: scale(1.1);
-}
-
 /* Responsive Design */
 @media (max-width: 600px) {
   #confirmation-page form {
@@ -458,173 +394,4 @@ button:hover {
   .btn {
     width: 100%;
   }
-}
-/* Contenedor del carrusel */
-.carousel-container {
-  position: relative;
-  max-width: 80%; /* Ancho máximo del carrusel */
-  margin: 0 auto;
-  overflow: hidden;
-  perspective: 1000px; /* Profundidad 3D */
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  transform-style: preserve-3d; /* Preservar el efecto 3D */
-}
-
-.carousel-item {
-  flex: 0 0 100%; /* Cada foto ocupa el ancho completo */
-  position: relative;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
-}
-
-.carousel-photo {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Botones "Anterior" y "Siguiente" */
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%; /* Forma circular */
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease;
-}
-
-.carousel-button:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Cambio de color al pasar el mouse */
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-/* Botón de cierre */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.close-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-/* Botón de pantalla completa */
-.fullscreen-button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  color: white;
-  border: none;
-  font-size: 1rem;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.fullscreen-button:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Cambio de color al pasar el mouse */
-}
-
-.fullscreen-button svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Botón para salir del modo pantalla completa */
-.fullscreen-close {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 2000;
-  display: none;
-}
-
-.fullscreen-close.hidden {
-  display: none;
-}
-
-.exit-fullscreen-button {
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.exit-fullscreen-button:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Cambio de color al pasar el mouse */
-}
-/* Estilo del contenedor de globos */
-#balloon-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Evita que bloquee interacciones */
-  overflow: hidden;
-  z-index: 1000;
-}
-
-/* Animación de flotación con zigzag */
-@keyframes float-zigzag {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(-25%) translateX(10px); /* Desplazamiento a la derecha */
-  }
-  50% {
-    transform: translateY(-50%) translateX(-10px); /* Desplazamiento a la izquierda */
-  }
-  75% {
-    transform: translateY(-75%) translateX(10px); /* Desplazamiento a la derecha */
-  }
-  100% {
-    transform: translateY(-150vh) translateX(0); /* Subir completamente */
-  }
-}
-
-/* Estilo de los globos */
-.balloon {
-  position: absolute;
-  width: 100px; /* Tamaño del globo */
-  height: auto;
-  bottom: 0; /* Comienza desde la parte inferior */
 }
