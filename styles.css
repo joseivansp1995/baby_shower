@@ -628,39 +628,3 @@ button:hover {
   height: auto;
   bottom: 0; /* Comienza desde la parte inferior */
 }
-/* Estilo del botón "Ver Galería" */
-.gallery-button {
-  display: inline-block;
-  margin-top: 20px; /* Espacio entre el mensaje y el botón */
-  text-decoration: none; /* Eliminar subrayado */
-}
-
-#view-gallery {
-  padding: 15px 30px; /* Espaciado interno */
-  background-color: #FFC107; /* Color amarillo dorado */
-  color: #333; /* Texto oscuro para contraste */
-  border: none; /* Sin borde */
-  border-radius: 25px; /* Bordes redondeados */
-  font-size: 1.5rem; /* Tamaño de fuente grande */
-  font-family: 'Pacifico', cursive; /* Fuente elegante */
-  font-weight: bold; /* Negrita para destacar */
-  cursor: pointer; /* Cambiar cursor al pasar el mouse */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra en el texto para mejorar la legibilidad */
-}
-
-/* Efecto al pasar el mouse */
-#view-gallery:hover {
-  background-color: #E5D4B5; /* Beige claro */
-  transform: scale(1.1); /* Agrandar ligeramente */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-}
-
-/* Diseño responsivo para dispositivos móviles */
-@media (max-width: 600px) {
-  #view-gallery {
-    font-size: 1.2rem; /* Reducir tamaño de fuente en pantallas pequeñas */
-    padding: 12px 24px; /* Reducir espaciado interno */
-  }
-}
