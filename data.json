@@ -96,6 +96,12 @@
     "mesa": 3
   },
   {
+    "nombre": "CRISTHEL MENDEZ AGUILAR",
+    "codigo": "MENDEZ1647",
+    "personas_invitadas": 1,
+    "mesa": 3
+  },
+  {
     "nombre": "",
     "codigo": "INVITADO9999",
     "personas_invitadas": 2,
@@ -138,9 +144,15 @@
     "mesa": 5
   },
   {
+    "nombre": "YOTZANY CARRILLO",
+    "codigo": "CARRILLO6713",
+    "personas_invitadas": 1,
+    "mesa": 5
+  },
+  {
     "nombre": "HUGO RAMOS",
     "codigo": "RAMOS3847",
-    "personas_invitadas": 2,
+    "personas_invitadas": 1,
     "mesa": 5
   },
   {
